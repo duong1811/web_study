@@ -35,9 +35,22 @@
           </a>
 
           <div class="hidden items-center gap-8 text-sm font-medium text-ink/75 md:flex">
+            <div class="home-dropdown relative">
+              <button class="home-dropdown-button inline-flex items-center gap-2 rounded-full px-2 py-1.5 transition hover:text-forest" type="button" aria-expanded="false" aria-label="Open homepage menu">
+                <span>Home</span>
+                <svg class="h-4 w-4 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+              </button>
+              <div class="home-dropdown-panel absolute left-0 top-[calc(100%+0.8rem)] w-56 rounded-2xl border border-ink/10 bg-white p-2 shadow-soft">
+                <a class="home-dropdown-item block rounded-xl px-3 py-2 text-sm transition hover:bg-forest/5 hover:text-forest" href="/index.html">Main home</a>
+                <a class="home-dropdown-item block rounded-xl px-3 py-2 text-sm transition hover:bg-forest/5 hover:text-forest" href="/home-creative.html">Creative studio</a>
+                <a class="home-dropdown-item block rounded-xl px-3 py-2 text-sm transition hover:bg-forest/5 hover:text-forest" href="/home-campus.html">Learning campus</a>
+                <a class="home-dropdown-item block rounded-xl px-3 py-2 text-sm transition hover:bg-forest/5 hover:text-forest" href="/home-minimal.html">Minimal premium</a>
+                <div class="my-1 h-px bg-ink/5"></div>
+                <a class="home-dropdown-item block rounded-xl px-3 py-2 text-sm font-semibold text-forest transition hover:bg-forest/5" href="/home-templates.html">Browse all demos</a>
+              </div>
+            </div>
             <a class="transition hover:text-forest" href="/courses.html">Courses</a>
             <a class="transition hover:text-forest" href="/about.html">About</a>
-            <a class="transition hover:text-forest" href="/home-templates.html">Home demos</a>
             <a class="transition hover:text-forest" href="#how-it-works">How it works</a>
             <a class="transition hover:text-forest" href="#stories">Success stories</a>
             <a class="transition hover:text-forest" href="/pricing.html">Pricing</a>
@@ -55,7 +68,7 @@
         </nav>
         <div id="mobile-menu" class="absolute left-0 right-0 top-full hidden border-t border-ink/10 bg-paper px-6 py-5 shadow-soft md:hidden">
           <div class="mx-auto flex max-w-7xl flex-col gap-4 text-sm font-semibold">
-            <a href="/courses.html">Courses</a><a href="/about.html">About</a><a href="/home-templates.html">Home demos</a><a href="#how-it-works">How it works</a><a href="#stories">Success stories</a><a href="/pricing.html">Pricing</a><a href="/faq.html">FAQ</a><a href="/contact.html">Contact</a><a href="/courses.html" class="rounded-full bg-forest px-5 py-3 text-center text-white">Start learning ↗</a>
+            <a href="/index.html">Main home</a><a href="/home-creative.html">Creative studio</a><a href="/home-campus.html">Learning campus</a><a href="/home-minimal.html">Minimal premium</a><a href="/home-templates.html">Browse all demos</a><a href="/courses.html">Courses</a><a href="/about.html">About</a><a href="#how-it-works">How it works</a><a href="#stories">Success stories</a><a href="/pricing.html">Pricing</a><a href="/faq.html">FAQ</a><a href="/contact.html">Contact</a><a href="/courses.html" class="rounded-full bg-forest px-5 py-3 text-center text-white">Start learning ↗</a>
           </div>
         </div>
       </header>
@@ -63,7 +76,7 @@
       <main>
         <section class="relative mx-auto grid max-w-7xl items-center gap-12 px-5 pb-20 pt-10 sm:px-8 sm:pb-28 sm:pt-16 lg:grid-cols-[1.02fr_.98fr] lg:gap-16 lg:px-10 lg:pb-32 lg:pt-14">
           <div class="hero-grid absolute -right-40 -top-24 -z-10 h-[620px] w-[620px] rounded-full opacity-60"></div>
-          <div class="reveal is-visible relative z-10">
+          <div class="reveal home-hero-copy is-visible relative z-10">
             <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-forest/15 bg-white/75 px-3.5 py-2 text-xs font-semibold text-forest shadow-sm sm:text-sm">
               <span class="h-2 w-2 rounded-full bg-lime-500 bg-[#95bd32]"></span>
               Learn something that moves you forward
@@ -93,7 +106,7 @@
             </div>
           </div>
 
-          <div class="reveal relative mx-auto w-full max-w-[540px] lg:mx-0 lg:ml-auto">
+          <div class="reveal home-panel-slide relative mx-auto w-full max-w-[540px] lg:mx-0 lg:ml-auto">
             <div class="absolute -left-5 top-10 h-24 w-24 rounded-full bg-lime/60 blur-2xl"></div>
             <div class="absolute -right-8 bottom-10 h-36 w-36 rounded-full bg-[#e6a18c]/50 blur-3xl"></div>
             <div class="relative overflow-hidden rounded-[2rem] bg-[#e5e7df] p-3 shadow-soft sm:rounded-[2.5rem] sm:p-4">
@@ -128,10 +141,10 @@
 
         <section class="border-y border-ink/5 bg-white/55">
           <div class="mx-auto grid max-w-7xl grid-cols-2 gap-y-8 px-5 py-9 sm:px-8 md:grid-cols-4 lg:px-10">
-            <div class="text-center"><p class="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">8,000<span class="text-forest">+</span></p><p class="mt-1 text-xs text-muted sm:text-sm">Curious learners</p></div>
-            <div class="text-center"><p class="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">120<span class="text-forest">+</span></p><p class="mt-1 text-xs text-muted sm:text-sm">Expert-led courses</p></div>
-            <div class="text-center"><p class="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">94<span class="text-forest">%</span></p><p class="mt-1 text-xs text-muted sm:text-sm">Would recommend us</p></div>
-            <div class="text-center"><p class="font-display text-2xl font-extrabold tracking-tight sm:text-3xl">4.9<span class="text-forest">/5</span></p><p class="mt-1 text-xs text-muted sm:text-sm">Average course rating</p></div>
+            <div class="stat-card text-center"><p class="stat-number font-display text-2xl font-extrabold tracking-tight sm:text-3xl" data-target="8000" data-suffix="+" data-decimals="0">0</p><p class="mt-1 text-xs text-muted sm:text-sm">Curious learners</p></div>
+            <div class="stat-card text-center"><p class="stat-number font-display text-2xl font-extrabold tracking-tight sm:text-3xl" data-target="120" data-suffix="+" data-decimals="0">0</p><p class="mt-1 text-xs text-muted sm:text-sm">Expert-led courses</p></div>
+            <div class="stat-card text-center"><p class="stat-number font-display text-2xl font-extrabold tracking-tight sm:text-3xl" data-target="94" data-suffix="%" data-decimals="0">0</p><p class="mt-1 text-xs text-muted sm:text-sm">Would recommend us</p></div>
+            <div class="stat-card text-center"><p class="stat-number font-display text-2xl font-extrabold tracking-tight sm:text-3xl" data-target="4.9" data-suffix="/5" data-decimals="1">0</p><p class="mt-1 text-xs text-muted sm:text-sm">Average course rating</p></div>
           </div>
         </section>
 

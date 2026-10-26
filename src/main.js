@@ -88,6 +88,32 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const homeDropdowns = document.querySelectorAll(".home-dropdown");
+homeDropdowns.forEach((dropdown) => {
+  const button = dropdown.querySelector(".home-dropdown-button");
+  if (!button) return;
+
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const isOpen = dropdown.classList.contains("is-open");
+    homeDropdowns.forEach((item) => {
+      item.classList.toggle("is-open", item === dropdown ? !isOpen : false);
+      const btn = item.querySelector(".home-dropdown-button");
+      if (btn) btn.setAttribute("aria-expanded", String(item === dropdown ? !isOpen : false));
+    });
+  });
+});
+
+document.addEventListener("click", (event) => {
+  if (!event.target.closest(".home-dropdown")) {
+    homeDropdowns.forEach((dropdown) => {
+      dropdown.classList.remove("is-open");
+      const button = dropdown.querySelector(".home-dropdown-button");
+      if (button) button.setAttribute("aria-expanded", "false");
+    });
+  }
+});
+
 const scrollProgress = document.createElement("div");
 scrollProgress.id = "scroll-progress";
 scrollProgress.className = "fixed left-0 top-0 z-[60] h-[3px] w-full origin-left bg-lime shadow-[0_0_12px_rgba(23,76,59,.22)]";
@@ -206,6 +232,53 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       element.style.setProperty("--tilt-x", "0deg");
       element.style.setProperty("--tilt-y", "0deg");
     });
+  });
+}
+
+const counters = document.querySelectorAll(".stat-number");
+
+function animateCounter(element) {
+  const target = Number(element.dataset.target || 0);
+  const decimals = Number(element.dataset.decimals || 0);
+  const suffix = element.dataset.suffix || "";
+  const duration = 1200;
+  const start = performance.now();
+
+  function tick(now) {
+    const progress = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const value = target * eased;
+    const formatted = new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    }).format(value);
+    element.textContent = `${formatted}${suffix}`;
+    if (progress < 1) requestAnimationFrame(tick);
+  }
+
+  requestAnimationFrame(tick);
+}
+
+if ("IntersectionObserver" in window) {
+  const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCounter(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  counters.forEach((counter) => counterObserver.observe(counter));
+} else {
+  counters.forEach((counter) => {
+    const target = Number(counter.dataset.target || 0);
+    const decimals = Number(counter.dataset.decimals || 0);
+    const suffix = counter.dataset.suffix || "";
+    counter.textContent = `${new Intl.NumberFormat("en-US", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    }).format(target)}${suffix}`;
   });
 }
 
