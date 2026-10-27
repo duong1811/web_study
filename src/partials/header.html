@@ -5,14 +5,92 @@
       <span class="font-display text-lg font-extrabold tracking-tight">northstar<span class="site-header__period">.</span></span>
     </a>
 
-    <div class="site-header__links hidden items-center gap-5 text-sm font-medium lg:flex">
-      <a class="site-nav-link transition" data-site-nav-link href="/index.html">Home</a>
-      <a class="site-nav-link transition" data-site-nav-link href="/courses.html">Courses</a>
+    <div class="site-header__links hidden items-center gap-2 text-sm font-medium lg:flex">
+      <div class="home-dropdown relative">
+        <button class="home-dropdown-button site-header__nav-button inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition" type="button" aria-expanded="false" aria-label="Open homepage menu">
+          <span>Home</span>
+          <svg class="h-4 w-4 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="home-dropdown-panel site-header__dropdown-panel absolute left-0 top-[calc(100%+0.8rem)] w-[46rem] rounded-[1.5rem] border border-black/10 bg-white/95 p-3 shadow-soft backdrop-blur-sm">
+          <div class="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <div class="rounded-2xl border border-black/5 bg-[#f7f7f2] p-3">
+              <div class="h-24 rounded-xl bg-[linear-gradient(135deg,#e5f1dc,#dfe8ff)]"></div>
+              <h3 class="mt-3 text-base font-bold text-ink">Home Page 01</h3>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex items-center gap-2 rounded-full bg-forest px-2.5 py-2 text-[11px] font-semibold text-white transition hover:bg-ink" href="/index.html"><span aria-hidden="true">→</span> Multi Page</a>
+                <a class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-2.5 py-2 text-[11px] font-semibold text-ink transition hover:border-forest/30 hover:text-forest" href="/index-one-page.html"><span aria-hidden="true">→</span> One Page</a>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-black/5 bg-[#f7f7f2] p-3">
+              <div class="h-24 rounded-xl bg-[linear-gradient(135deg,#d6ddff,#f3d7c6)]"></div>
+              <h3 class="mt-3 text-base font-bold text-ink">Home Page 02</h3>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex items-center gap-2 rounded-full bg-forest px-2.5 py-2 text-[11px] font-semibold text-white transition hover:bg-ink" href="/index2.html"><span aria-hidden="true">→</span> Multi Page</a>
+                <a class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-2.5 py-2 text-[11px] font-semibold text-ink transition hover:border-forest/30 hover:text-forest" href="/index2-one-page.html"><span aria-hidden="true">→</span> One Page</a>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-black/5 bg-[#f7f7f2] p-3">
+              <div class="h-24 rounded-xl bg-[linear-gradient(135deg,#e4d7ff,#dfe7ff)]"></div>
+              <h3 class="mt-3 text-base font-bold text-ink">Home Page 03</h3>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex items-center gap-2 rounded-full bg-forest px-2.5 py-2 text-[11px] font-semibold text-white transition hover:bg-ink" href="/index3.html"><span aria-hidden="true">→</span> Multi Page</a>
+                <a class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-2.5 py-2 text-[11px] font-semibold text-ink transition hover:border-forest/30 hover:text-forest" href="/index3-one-page.html"><span aria-hidden="true">→</span> One Page</a>
+              </div>
+            </div>
+            <div class="rounded-2xl border border-black/5 bg-[#f7f7f2] p-3">
+              <div class="h-24 rounded-xl bg-[linear-gradient(135deg,#f1e7dc,#efe8d8)]"></div>
+              <h3 class="mt-3 text-base font-bold text-ink">Home Page 04</h3>
+              <div class="mt-3 flex flex-col gap-2">
+                <a class="inline-flex items-center gap-2 rounded-full bg-forest px-2.5 py-2 text-[11px] font-semibold text-white transition hover:bg-ink" href="/index4.html"><span aria-hidden="true">→</span> Multi Page</a>
+                <a class="inline-flex items-center gap-2 rounded-full border border-black/10 bg-white px-2.5 py-2 text-[11px] font-semibold text-ink transition hover:border-forest/30 hover:text-forest" href="/index4-one-page.html"><span aria-hidden="true">→</span> One Page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <a class="site-nav-link transition" data-site-nav-link href="/about.html">About</a>
-      <a class="site-nav-link transition" data-site-nav-link href="/home-templates.html">Home demos</a>
+
+      <div class="group relative">
+        <button class="site-header__nav-button inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition" type="button" aria-expanded="false" aria-label="Open pages menu">
+          <span>Pages</span>
+          <svg class="h-4 w-4 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="site-header__dropdown-panel absolute left-0 top-[calc(100%+0.8rem)] w-72 rounded-[1.5rem] border border-black/10 bg-white/95 p-3 shadow-soft backdrop-blur-sm opacity-0 invisible transition-all duration-200 group-hover:visible group-hover:opacity-100">
+          <div class="grid gap-2">
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/instructor.html">Instructors</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/instructor-details.html">Instructor Details</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/events.html">Events</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/event-details.html">Event Details</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/become-a-teacher.html">Become A Teacher</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/testimonials.html">Testimonials</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/pricing.html">Pricing</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/gallery.html">Gallery</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/faq.html">FAQs</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/404.html">404 Error</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/coming-soon.html">Coming Soon</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative">
+        <button class="site-header__nav-button inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm font-medium transition" type="button" aria-expanded="false" aria-label="Open course menu">
+          <span>Courses</span>
+          <svg class="h-4 w-4 transition" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="site-header__dropdown-panel absolute left-0 top-[calc(100%+0.8rem)] w-56 rounded-[1.5rem] border border-black/10 bg-white/95 p-3 shadow-soft backdrop-blur-sm opacity-0 invisible transition-all duration-200 group-hover:visible group-hover:opacity-100">
+          <div class="grid gap-2">
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/courses.html">All Courses</a>
+            <a class="rounded-xl px-3 py-2 text-sm transition hover:bg-paper hover:text-forest" href="/course-detail.html">Course Details</a>
+          </div>
+        </div>
+      </div>
+
       <a class="site-nav-link transition" data-site-nav-link href="/pricing.html">Pricing</a>
-      <a class="site-nav-link transition" data-site-nav-link href="/faq.html">FAQ</a>
+      <a class="site-nav-link transition" data-site-nav-link href="/home-templates.html">Demos</a>
       <a class="site-nav-link transition" data-site-nav-link href="/contact.html">Contact</a>
+      <a class="site-nav-link transition" data-site-nav-link href="/login.html">Login</a>
+      <a class="site-nav-link transition site-header__cta-link" data-site-nav-link href="/register.html">Register</a>
     </div>
 
     <a href="/courses.html" class="site-header__cta hidden shrink-0 items-center gap-2 rounded-full px-5 py-3 text-sm font-bold transition hover:-translate-y-0.5 lg:inline-flex">
@@ -26,13 +104,23 @@
 
   <div id="mobile-menu" class="site-mobile-menu absolute left-0 right-0 top-full z-30 border-t px-5 py-5 opacity-0 shadow-soft transition-all duration-200 lg:hidden" aria-hidden="true">
     <div class="mx-auto grid max-w-7xl gap-1 sm:grid-cols-2">
-      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/index.html">Home</a>
-      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/courses.html">Courses</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/index.html">Main home</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/index-one-page.html">Home one page</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/index2.html">Home page 02</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/index3.html">Home page 03</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/index4.html">Home page 04</a>
       <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/about.html">About</a>
-      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/home-templates.html">Homepage demos</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/instructor.html">Instructors</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/events.html">Events</a>
       <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/pricing.html">Pricing</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/gallery.html">Gallery</a>
       <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/faq.html">FAQ</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/courses.html">Courses</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/course-detail.html">Course details</a>
       <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/contact.html">Contact</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/login.html">Login</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/register.html">Register</a>
+      <a class="site-mobile-link rounded-xl px-4 py-3 text-sm font-semibold transition" data-site-nav-link href="/register.html">Register</a>
       <a class="site-mobile-cta mt-2 rounded-full px-5 py-3.5 text-center text-sm font-bold transition sm:col-span-2" href="/courses.html">Explore courses ↗</a>
     </div>
   </div>

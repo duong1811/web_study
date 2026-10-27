@@ -167,7 +167,25 @@ if (menuToggle && mobileMenu) {
 
 const pathname = window.location.pathname === "/" ? "/index.html" : window.location.pathname;
 const routeAliases = {
+  "/course.html": "/courses.html",
+  "/course-carousel.html": "/courses.html",
+  "/course-list.html": "/courses.html",
   "/course-detail.html": "/courses.html",
+  "/products.html": "/courses.html",
+  "/product-details.html": "/products.html",
+  "/cart.html": "/products.html",
+  "/checkout.html": "/products.html",
+  "/wishlist.html": "/products.html",
+  "/sign-up.html": "/login.html",
+  "/blog.html": "/blog.html",
+  "/blog-carousel.html": "/blog.html",
+  "/blog-list.html": "/blog.html",
+  "/blog-details.html": "/blog.html",
+  "/index-dark.html": "/index.html",
+  "/index-one-page.html": "/index.html",
+  "/index2-one-page.html": "/index2.html",
+  "/index3-one-page.html": "/index3.html",
+  "/index4-one-page.html": "/index4.html",
   "/home-creative.html": "/home-templates.html",
   "/home-campus.html": "/home-templates.html",
   "/home-minimal.html": "/home-templates.html",
@@ -187,6 +205,30 @@ revealItems.forEach((element) => {
 revealGroups.forEach((siblings) => {
   siblings.forEach((element, index) => element.style.setProperty("--reveal-delay", `${Math.min(index, 4) * 60}ms`));
 });
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const tiltables = document.querySelectorAll("main article, .home-panel-slide, .site-header__dropdown-panel, .theme-panel, .site-footer__social");
+  tiltables.forEach((element) => {
+    element.classList.add("tilt-3d");
+    element.addEventListener("pointermove", (event) => {
+      const bounds = element.getBoundingClientRect();
+      const px = (event.clientX - bounds.left) / bounds.width;
+      const py = (event.clientY - bounds.top) / bounds.height;
+      const rotateY = (px - 0.5) * 12;
+      const rotateX = (0.5 - py) * 12;
+      element.style.setProperty("--rx", `${rotateX.toFixed(2)}deg`);
+      element.style.setProperty("--ry", `${rotateY.toFixed(2)}deg`);
+      element.style.setProperty("--mx", `${(px * 100).toFixed(2)}%`);
+      element.style.setProperty("--my", `${(py * 100).toFixed(2)}%`);
+    });
+    element.addEventListener("pointerleave", () => {
+      element.style.setProperty("--rx", "0deg");
+      element.style.setProperty("--ry", "0deg");
+      element.style.setProperty("--mx", "50%");
+      element.style.setProperty("--my", "50%");
+    });
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver((entries, observer) => {

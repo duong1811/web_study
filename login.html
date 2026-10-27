@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Log in to your Northstar Academy learning account." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>Login — Northstar Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <main class="mx-auto flex min-h-screen max-w-6xl items-center px-5 py-16 sm:px-8 lg:px-10">
+      <div class="grid w-full gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+        <div class="hidden lg:block">
+          <span class="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white px-3.5 py-2 text-xs font-bold uppercase tracking-[0.2em] text-forest">Welcome back</span>
+          <h1 class="font-display mt-6 max-w-lg text-5xl font-extrabold leading-[0.96] tracking-[-0.07em]">Keep learning. Keep moving.</h1>
+          <p class="mt-5 max-w-md text-base leading-7 text-muted">
+            You’re one sign-in away from your next lesson, project, and breakthrough moment.
+          </p>
+          <div class="mt-8 space-y-4 text-sm text-muted">
+            <div class="flex items-start gap-3 rounded-2xl border border-ink/10 bg-white p-4 shadow-soft">
+              <span class="grid h-8 w-8 place-items-center rounded-full bg-[#edf6df] text-forest">✓</span>
+              <div>
+                <p class="font-semibold text-ink">Track courses in one place</p>
+                <p class="mt-1">Save lessons, keep progress, and revisit your favorite resources.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 rounded-2xl border border-ink/10 bg-white p-4 shadow-soft">
+              <span class="grid h-8 w-8 place-items-center rounded-full bg-[#edf6df] text-forest">★</span>
+              <div>
+                <p class="font-semibold text-ink">Learn at your pace</p>
+                <p class="mt-1">Return anytime to continue where you left off.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mx-auto w-full max-w-lg rounded-[2rem] border border-ink/10 bg-white p-6 shadow-soft sm:p-8">
+          <div class="flex items-center justify-between gap-3">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[0.18em] text-forest">Login</p>
+              <h2 class="font-display mt-2 text-3xl font-extrabold tracking-[-0.05em]">Welcome back</h2>
+            </div>
+            <a href="/index.html" class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#edf6df] text-lg text-forest" aria-label="Back to home">✦</a>
+          </div>
+
+          <form class="mt-7 space-y-5" data-demo-form data-success-message="Welcome back! Your dashboard is ready.">
+            <label class="block text-sm font-semibold text-ink">
+              Email address
+              <input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3.5 text-sm text-ink outline-none transition focus:border-forest" type="email" name="email" placeholder="you@example.com" required />
+            </label>
+
+            <label class="block text-sm font-semibold text-ink">
+              Password
+              <input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3.5 text-sm text-ink outline-none transition focus:border-forest" type="password" name="password" placeholder="Enter your password" required />
+            </label>
+
+            <div class="flex items-center justify-between gap-3 text-sm">
+              <label class="inline-flex items-center gap-2 text-muted">
+                <input type="checkbox" class="h-4 w-4 rounded border-ink/15 text-forest" />
+                Remember me
+              </label>
+              <a href="/reset-password.html" class="font-semibold text-forest hover:text-ink">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-forest px-5 py-3.5 text-sm font-bold text-white transition hover:bg-ink">Sign in</button>
+            <p data-form-message class="min-h-4 text-sm text-forest" aria-live="polite"></p>
+          </form>
+
+          <p class="mt-6 text-center text-sm text-muted">
+            Don’t have an account?
+            <a href="/register.html" class="font-semibold text-forest hover:text-ink">Create one</a>
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

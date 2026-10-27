@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Become a teacher at Northstar Academy and help learners grow." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>Become a Teacher — Northstar Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <main class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
+      <div class="grid gap-10 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+        <div class="reveal">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">Join our team</p>
+          <h1 class="font-display mt-4 text-4xl font-extrabold leading-tight tracking-[-.06em] sm:text-6xl">Teach what you know. <span class="text-forest">Make a difference.</span></h1>
+          <p class="mt-5 text-base leading-7 text-muted">We partner with thoughtful practitioners who want to turn real-world experience into meaningful learning for others.</p>
+          <div class="mt-8 space-y-4">
+            <div class="flex gap-4 rounded-[1.5rem] border border-ink/10 bg-white p-4 shadow-soft"><span class="grid h-10 w-10 place-items-center rounded-full bg-[#edf6df] text-forest">✓</span><div><p class="font-display text-xl font-extrabold">Expert-led teaching</p><p class="mt-1 text-sm text-muted">Bring practical, relevant knowledge into a clear learning experience.</p></div></div>
+            <div class="flex gap-4 rounded-[1.5rem] border border-ink/10 bg-white p-4 shadow-soft"><span class="grid h-10 w-10 place-items-center rounded-full bg-[#edf6df] text-forest">↗</span><div><p class="font-display text-xl font-extrabold">Supportive workflow</p><p class="mt-1 text-sm text-muted">From curriculum support to learner engagement, we help you show up well.</p></div></div>
+            <div class="flex gap-4 rounded-[1.5rem] border border-ink/10 bg-white p-4 shadow-soft"><span class="grid h-10 w-10 place-items-center rounded-full bg-[#edf6df] text-forest">♡</span><div><p class="font-display text-xl font-extrabold">A thoughtful community</p><p class="mt-1 text-sm text-muted">Join a group of educators who care about real learning, not just content volume.</p></div></div>
+          </div>
+        </div>
+        <div class="reveal rounded-[2rem] border border-ink/10 bg-white p-6 shadow-soft sm:p-8">
+          <h2 class="font-display text-3xl font-extrabold tracking-[-.05em]">Apply to teach</h2>
+          <form class="mt-6 space-y-5" data-demo-form data-success-message="Thanks! We’ll review your application and be in touch soon.">
+            <label class="block text-sm font-semibold text-ink">Full name<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3.5 text-sm outline-none focus:border-forest" type="text" name="name" placeholder="Your name" required /></label>
+            <label class="block text-sm font-semibold text-ink">Email<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3.5 text-sm outline-none focus:border-forest" type="email" name="email" placeholder="you@example.com" required /></label>
+            <label class="block text-sm font-semibold text-ink">What do you teach?<textarea class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3.5 text-sm outline-none focus:border-forest" name="topic" rows="4" placeholder="Design, marketing, writing, coding, etc." required></textarea></label>
+            <button type="submit" class="inline-flex w-full items-center justify-center rounded-full bg-forest px-5 py-3.5 text-sm font-bold text-white transition hover:bg-ink">Send application</button>
+            <p data-form-message class="min-h-4 text-sm text-forest" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

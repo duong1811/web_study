@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Course list layout for Northstar Academy." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>Course List — Northstar Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <main>
+      <section class="page-hero">
+        <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-24 lg:px-10">
+          <div class="reveal flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">Course catalog</p>
+              <h1 class="font-display mt-4 text-4xl font-extrabold tracking-[-.06em] sm:text-5xl">Explore all programs.</h1>
+            </div>
+            <a href="/courses.html" class="rounded-full border border-ink/10 px-5 py-3 text-sm font-bold transition hover:border-forest hover:text-forest">Browse grid view</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 pb-20 sm:px-8 lg:px-10">
+        <div class="space-y-5">
+          <article class="reveal flex flex-col gap-5 rounded-[2rem] border border-ink/10 bg-white p-5 shadow-soft md:flex-row md:items-center">
+            <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=80" alt="UX Design Foundations" class="h-52 w-full rounded-[1.5rem] object-cover md:w-56" />
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[.14em] text-forest"><span>Design</span><span>4.9</span><span>Beginner</span></div>
+              <h2 class="font-display mt-3 text-2xl font-extrabold">UX Design Foundations</h2>
+              <p class="mt-2 text-sm leading-6 text-muted">Learn research, flows, and interface basics with hands-on practice and a polished portfolio project.</p>
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                <span class="font-display text-2xl font-extrabold">$89</span>
+                <a href="/course-detail.html" class="rounded-full bg-forest px-5 py-2.5 text-sm font-bold text-white">View course</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal flex flex-col gap-5 rounded-[2rem] border border-ink/10 bg-white p-5 shadow-soft md:flex-row md:items-center">
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80" alt="Web Development Made Simple" class="h-52 w-full rounded-[1.5rem] object-cover md:w-56" />
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[.14em] text-forest"><span>Technology</span><span>4.8</span><span>Beginner</span></div>
+              <h2 class="font-display mt-3 text-2xl font-extrabold">Web Development, Made Simple</h2>
+              <p class="mt-2 text-sm leading-6 text-muted">Work through HTML, CSS, and JavaScript with real project-based lessons and beginner-friendly structure.</p>
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                <span class="font-display text-2xl font-extrabold">$99</span>
+                <a href="/course-detail.html" class="rounded-full bg-forest px-5 py-2.5 text-sm font-bold text-white">View course</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="reveal flex flex-col gap-5 rounded-[2rem] border border-ink/10 bg-white p-5 shadow-soft md:flex-row md:items-center">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="Creative Entrepreneur" class="h-52 w-full rounded-[1.5rem] object-cover md:w-56" />
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[.14em] text-forest"><span>Business</span><span>4.9</span><span>Intermediate</span></div>
+              <h2 class="font-display mt-3 text-2xl font-extrabold">The Creative Entrepreneur</h2>
+              <p class="mt-2 text-sm leading-6 text-muted">Plan a launch, define a service offer, and learn the systems that help creative work become a business.</p>
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                <span class="font-display text-2xl font-extrabold">$119</span>
+                <a href="/course-detail.html" class="rounded-full bg-forest px-5 py-2.5 text-sm font-bold text-white">View course</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

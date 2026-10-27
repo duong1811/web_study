@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Checkout page for Northstar Academy." />
+    <meta name="theme-color" content="#f7f7f2" />
+    <title>Checkout — Northstar Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body class="bg-paper text-ink antialiased">
+    <main class="mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
+      <div class="reveal mb-8">
+        <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">Checkout</p>
+        <h1 class="font-display mt-3 text-4xl font-extrabold tracking-[-.05em]">Complete your order.</h1>
+      </div>
+
+      <div class="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+        <form class="reveal rounded-[2rem] border border-ink/10 bg-white p-6 shadow-soft sm:p-8">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <label class="block text-sm font-semibold text-ink">First name<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" /></label>
+            <label class="block text-sm font-semibold text-ink">Last name<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" /></label>
+          </div>
+          <label class="mt-5 block text-sm font-semibold text-ink">Email<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="email" /></label>
+          <label class="mt-5 block text-sm font-semibold text-ink">Address<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" /></label>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2">
+            <label class="block text-sm font-semibold text-ink">City<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" /></label>
+            <label class="block text-sm font-semibold text-ink">ZIP code<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" /></label>
+          </div>
+          <label class="mt-5 block text-sm font-semibold text-ink">Card number<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" placeholder="•••• •••• •••• ••••" /></label>
+          <div class="mt-5 grid gap-5 sm:grid-cols-2">
+            <label class="block text-sm font-semibold text-ink">Expiry<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" placeholder="MM / YY" /></label>
+            <label class="block text-sm font-semibold text-ink">CVC<input class="mt-2 block w-full rounded-2xl border border-ink/10 bg-paper px-4 py-3 text-sm outline-none focus:border-forest" type="text" /></label>
+          </div>
+          <button type="submit" class="mt-6 inline-flex w-full items-center justify-center rounded-full bg-forest px-5 py-3.5 text-sm font-bold text-white transition hover:bg-ink">Place order</button>
+        </form>
+
+        <aside class="reveal rounded-[2rem] border border-ink/10 bg-white p-6 shadow-soft">
+          <p class="text-xs font-bold uppercase tracking-[.2em] text-forest">Order summary</p>
+          <div class="mt-5 space-y-4 text-sm text-muted">
+            <div class="flex items-center justify-between"><span>Portfolio Kit</span><span class="font-semibold text-ink">$29</span></div>
+            <div class="flex items-center justify-between"><span>Study Planner</span><span class="font-semibold text-ink">$19</span></div>
+            <div class="flex items-center justify-between"><span>Shipping</span><span class="font-semibold text-ink">Free</span></div>
+            <div class="flex items-center justify-between"><span>Tax</span><span class="font-semibold text-ink">$3.84</span></div>
+          </div>
+          <div class="mt-5 border-t border-ink/5 pt-5">
+            <div class="flex items-center justify-between"><span class="font-semibold text-ink">Total</span><span class="font-display text-3xl font-extrabold">$51.84</span></div>
+          </div>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>
